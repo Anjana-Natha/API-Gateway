@@ -35,7 +35,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                     RestClient restClient = RestClient.create();
                     restClient
                             .get()
-                            .uri("http://authentication-sr:8090/api/auth/validate/token?token=" + authHeaderToken)
+                            .uri("http://localhost:7074/api/auth/validate/token?token=" + authHeaderToken)
                             .retrieve()
                             .body(Boolean.class);
                 } catch (Exception e) {
